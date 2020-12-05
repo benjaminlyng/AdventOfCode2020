@@ -40,5 +40,3 @@ for passport in newlist:
         counter += 1
 print(f"Part 2 \n {counter=}")
 
-# map(filter(lambda x: x in passport.keys()))
-# reduce(lambda x: x in required, newlist[0])
