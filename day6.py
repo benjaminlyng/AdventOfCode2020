@@ -19,8 +19,14 @@ for group in grouped_list:
 
 print(f"Part 2 - {sum(counts)=} ")
 
-
-def get_common_count(group):
+## Part 2 rewritten:
+def get_common_count(group:list):
+    """ Count letters that are common in each entry of a list of strings
+    >>> get_common_count(['ab', 'ac'])
+    1
+    >>> get_common_count(['a', 'b', 'c'])
+    0
+    """
     group_set = [set(x) for x in group]
     common = group_set[0].intersection(*group_set)
     return len(common)
