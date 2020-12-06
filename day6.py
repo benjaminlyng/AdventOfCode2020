@@ -15,7 +15,17 @@ counts = []
 for group in grouped_list:
     group_set = [set(x) for x in group]
     common = group_set[0].intersection(*group_set)
-    print(group_set , '\n', common)
     counts.append(len(common))
 
 print(f"Part 2 - {sum(counts)=} ")
+
+
+def get_common_count(group):
+    group_set = [set(x) for x in group]
+    common = group_set[0].intersection(*group_set)
+    return len(common)
+
+counts = map(get_common_count, grouped_list)
+print(f"Part 2 - rewritten - {sum(counts)=} ")
+
+
